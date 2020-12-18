@@ -1,0 +1,53 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+form {
+  color: white;
+  background: rgba(29, 57, 95, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 8rem;
+  border-radius: 2rem;
+}
+form h3 {
+  padding-bottom: 1rem;
+}
+form input {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+form button {
+  border: none;
+  padding: 2rem;
+  margin: auto;
+  min-width: 10vw;
+  border-radius: 1rem;
+  color: white;
+  background: rgb(112, 177, 199);
+  font-size: 2rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(96, 128, 138);
+}
