@@ -1,1 +1,6 @@
-console.log("Content script running...");
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+      // you're at the bottom of the page
+      console.log("ContentScript is running");
+    }
+};
