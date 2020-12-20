@@ -5,6 +5,7 @@
     "manifest_version": 2,
 
     "page_action": {
+        "default_popup": "popup.html",
         "default_icon": {
             "16": "icons/book_16.png",
             "32": "icons/book_32.png",
@@ -33,5 +34,5 @@
         "persistent": false
     },
 
-    "permissions": ["declarativeContent"]
+    "permissions": ["declarativeContent", "tabs"]
 }
