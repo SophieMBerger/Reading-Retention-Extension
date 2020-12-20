@@ -34,5 +34,5 @@
         "persistent": false
     },
 
-    "permissions": ["declarativeContent", "tabs"]
+    "permissions": ["declarativeContent", "tabs", "storage"]
 }

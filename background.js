@@ -16,13 +16,18 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
 // Receive message from contentScript when bottom of page is reached
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
-      console.log(sender.tab ?
-                  "from a content script:" + sender.tab.url :
-                  "from the extension");
-      if (request.message == "bottom")
-        // window.open("popup.html", window.name, "width=500,height=500,status=no,scrollbars=no,resizable=yes, top=0, left=0");
-        chrome.tabs.update({url:"popup.html"}); 
-        // create({url:"popup.html"});
-        sendResponse({response: "true"});
+        
+        // Save the url the user visited
+        chrome.storage.local.set({visitedUrl: sender.tab.url}, function() {
+            console.log('Value is set to ' + sender.tab.url);
+        });
+
+        console.log(sender.tab ?
+                    "from a content script:" + sender.tab.url :
+                    "from the extension");
+
+        if (request.message == "bottom")
+            chrome.tabs.update({url:"popup.html"}); 
+            sendResponse({response: "true"});
     }
-  );
+);
