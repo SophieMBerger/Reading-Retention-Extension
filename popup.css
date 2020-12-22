@@ -7,9 +7,23 @@
 html {
   font-size: 62.5%;
 }
+.logo-name {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+.logo-name img {
+  width: 4vw;
+  margin-right: 2rem;
+}
+.logo-name h3 {
+  font-family: "Lobster", cursive;
+  color: rgb(29, 57, 95);
+}
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,6 +33,7 @@ body {
 body h2 {
   text-align: center;
   text-decoration: underline;
+  font-size: 3.4rem;
 }
 
 form {
@@ -26,16 +41,17 @@ form {
   background: rgba(29, 57, 95, 0.8);
   display: flex;
   flex-direction: column;
-  padding: 2rem 8rem;
+  padding: 2rem 3rem;
   border-radius: 2rem;
+  width: 40vw;
 }
 form h3 {
   padding-bottom: 1rem;
 }
 form input {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 form button {
   border: none;
@@ -50,4 +66,21 @@ form button {
 }
 button:hover {
   background-color: rgb(96, 128, 138);
+}
+
+@media screen and (max-width: 800px) {
+  form {
+    width: 80vw;
+  }
+  .logo-name img {
+    width: 5rem;
+    margin-right: 1rem;
+  }
+  body {
+    font-size: 1.5rem;
+  }
+  body h2 {
+    font-size: 2rem;
+    margin: 0rem 1.5rem;
+  }
 }
